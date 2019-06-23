@@ -54,14 +54,17 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
                 value_two=Convert.ToInt32(operand_3);
                 
                 /* if second is not divisible by first the return -1*/
-                
-                if(value_two%value_one!=0) return -1;
-                 
-                 /* Calculate Value */
+                if(value_two%value_one!=0)
+                { 
+                    return -1;
+                }
+                else
+                {
                 value_one=value_two/value_one;
                 equation_1=value_one.ToString();
-                return findValue(equation_1,operand_2);
-            }
+                   return findValue(equation_1,operand_2);
+                 }
+        }
 
             throw new NotImplementedException();
         }
